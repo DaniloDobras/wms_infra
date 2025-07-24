@@ -30,6 +30,4 @@ services:
 
 networks:
   shared-kafka-net:
-    name: shared-kafka-net
-    driver: bridge
     external: true
