@@ -60,6 +60,8 @@ services:
       - postgres
     networks:
       - shared-kafka-net
+    volumes:
+      - ./keycloak/themes/bonfanti:/opt/keycloak/themes/bonfanti
 
 volumes:
   keycloak_data:
