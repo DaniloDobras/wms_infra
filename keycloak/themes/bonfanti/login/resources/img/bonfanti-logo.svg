@@ -1,0 +1,13 @@
+<svg width="300" height="90" viewBox="0 0 300 90" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bonfanti text -->
+  <text x="15" y="40" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#d32f2f">Bonfanti</text>
+  
+  <!-- Orange line above 'n' and 'f' -->
+  <line x1="70" y1="12" x2="115" y2="12" stroke="#ff9800" stroke-width="4"/>
+  
+  <!-- Red circle for the 'i' dot -->
+  <circle cx="145" cy="12" r="4" fill="#d32f2f"/>
+  
+  <!-- Tagline -->
+  <text x="15" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#000000" text-transform="uppercase">INTEGRATED HANDLING SOLUTIONS</text>
+</svg> 

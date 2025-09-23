@@ -1,0 +1,44 @@
+
+div.kc-logo-text {
+    background: none !important;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+#kc-header-wrapper {
+    background: url("../img/bonfanti-logo.svg") no-repeat center;
+    background-size: contain;
+    height: 120px;
+    margin-bottom: 20px;
+    text-indent: -9999px;
+}
+
+#kc-login.pf-m-primary {
+    background-color: #d32f2f !important;
+    border-color: #d32f2f !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+#kc-login.pf-m-primary:hover {
+    background-color: #ff9800 !important;
+    border-color: #ff9800 !important;
+}
+
+#kc-form-options a,
+#kc-registration a {
+    color: #d32f2f !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#kc-form-options a:hover,
+#kc-registration a:hover {
+    color: #ff9800 !important;
+    text-decoration: underline;
+}
+
+body {
+    background-color: darkgrey !important;
+}
