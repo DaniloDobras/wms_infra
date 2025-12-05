@@ -153,6 +153,44 @@ volumes:
   kafka3-data:
 
 
+  postgres:
+    image: postgres:15
+    container_name: keycloak_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: keycloak
+      POSTGRES_DB: keycloak
+    volumes:
+      - keycloak_data:/var/lib/postgresql/data
+    networks:
+      - shared-kafka-net
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0.7  # check for latest stable version
+    container_name: keycloak
+    restart: always
+    command:
+      - start-dev   # use 'start' for production
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: keycloak
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - shared-kafka-net
+    volumes:
+      - ./keycloak/themes/bonfanti:/opt/keycloak/themes/bonfanti
+
+volumes:
+  keycloak_data:
+
 networks:
   shared-kafka-net:
     name: shared-kafka-net
